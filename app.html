@@ -1,22 +1,24 @@
 <head>
-  <title>Daisy Me Rollin'</title>
+<title>Daisy Me Rollin'</title>
+
 </head>
 
 <body>
   <h1>Daisy Me Rollin'</h1>
   <h2>Now you wont have to pass a lot of Gas (Stations)</h2>
   <h3></h3>
+  <form>
+  		Miles per Gallon:<br>
+  		<input type="text" name="mpg">
+  		<br>
+  		Total gallons in tank:<br>
+ 		 <input type="text" name="totalgallons">
+  </form>
 
   {{> hello}}
 </body>
 
-<form>
-  Miles per Gallon:<br>
-  <input type="text" name="mpg">
-  <br>
-  Total gallons in tank:<br>
-  <input type="text" name="totalgallons">
-</form>
+
 
 <template name="hello">
   <button>Click Me</button>
