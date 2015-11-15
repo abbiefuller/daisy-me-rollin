@@ -4,10 +4,10 @@
 </head>
 
 <body>
-<<<<<<< HEAD
+//HEAD
   <h1>Daisy Me Rollin'</h1>
   <h2>Now you wont have to pass a lot of Gas (Stations)</h2>
-  <h3> </h3>
+
   <head>
     <title>Simple Map</title>
     <meta name="viewport" content="initial-scale=1.0">
@@ -27,24 +27,27 @@
     <div id="map"></div>
     <script>
 
-var map;
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -34.397, lng: 150.644},
-    zoom: 8
-  });
-}
+		var map;
+		function initMap() {
+	  	map = new google.maps.Map(document.getElementById('map'), {
+    	center: {lat: -34.397, lng: 150.644},
+    	zoom: 8
+  		});
+		}
 
     </script>
+   </body>
+
+   <body>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBsHPavnFTHJ46KE883x80oSciN2yMR9k&callback=initMap"
-        async defer></script>
-  </body>
+        async defer>
+    </script> 
+   </body>
 
-  <form>
-=======
+ 
 
 
-<div id="header">
+<body><div id="header">
 <h1>Daisy Me Rollin</h1>
 </div>
 
@@ -57,83 +60,13 @@ Gas stations near by<br>
 <div id="section">
 <h1>Get Started</h1>
 <h2>Now you wont have to pass a lot of Gas (stations)</h2>
- <form>
->>>>>>> origin/master
-  		Miles per Gallon:<br>
-  		<input type="text" name="mpg">
-  		<br>
-  		Total gallons in tank:<br>
- 		 <input type="text" name="totalgallons">
- 		 <br>
- 		Tank empty level:<br>
- 		<input type="text" name="tankempty"> 
- 		<br>
- 		Destination:<br>
- 		<input type="text" name="destination">
- 		<br><br>
- 		<input type="submit" value="Submit">
- 		<br><br>
-  </form>
-</div>
+
+
+
 
 <div id="footer">
 Copyright © 
 </div>
-
-
-  
-  // Note: This example requires that you consent to location sharing when
-  // prompted by your browser. If you see the error "The Geolocation service
-  // failed.", it means you probably did not give permission for the browser to
-  // locate you.
-
-<function initMap()>{
-  // is this working
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBsHPavnFTHJ46KE883x80oSciN2yMR9k&callback=initMap">
-
-  var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -34.397, lng: 150.644},
-    zoom: 6
-  });
-
-  var infoWindow = new google.maps.InfoWindow({map: map});
-
-
-   // Try HTML5 geolocation.
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var pos = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
-
-      infoWindow.setPosition(pos);
-      infoWindow.setContent('Location found.');
-      map.setCenter(pos);
-    }, function() {
-      handleLocationError(true, infoWindow, map.getCenter());
-    });
-  } else {
-    // Browser doesn't support Geolocation
-    handleLocationError(false, infoWindow, map.getCenter());
-  }
-}
-
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-  infoWindow.setPosition(pos);
-  infoWindow.setContent(browserHasGeolocation ?
-                        'Error: The Geolocation service failed.' :
-                        'Error: Your browser doesn\'t support geolocation.');
-}
-
 </body>
 
-<template name="hello">
-<<<<<<< Updated upstream
  
-=======
-  <button>Click Me</button>
-  <initMap()>
-  <p>Youve pressed the button {{counter}} times.</p>
->>>>>>> Stashed changes
-</template>
