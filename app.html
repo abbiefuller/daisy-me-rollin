@@ -7,14 +7,44 @@
   <h1>Daisy Me Rollin'</h1>
   <h2>Now you wont have to pass a lot of Gas (Stations)</h2>
   <h3> </h3>
-  {{> hello}}
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      html, body {
+        height: 60%;
+        margin: 30;
+        padding: 10;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: -34.397, lng: 150.644},
+    zoom: 8
+  });
+}
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBsHPavnFTHJ46KE883x80oSciN2yMR9k&callback=initMap"
+        async defer></script>
+  </body>
+
   <form>
   		Miles per Gallon:<br>
   		<input type="text" name="mpg">
   		<br>
   		Total gallons in tank:<br>
  		 <input type="text" name="totalgallons">
-<<<<<<< Updated upstream
  		 <br>
  		Tank empty level:<br>
  		<input type="text" name="tankempty"> 
@@ -24,27 +54,25 @@
  		<br><br>
  		<input type="submit" value="Submit">
  		<br><br>
-
-=======
-
- 		
->>>>>>> Stashed changes
   </form>
 
-  {{> hello}}
+  
   // Note: This example requires that you consent to location sharing when
   // prompted by your browser. If you see the error "The Geolocation service
   // failed.", it means you probably did not give permission for the browser to
   // locate you.
 
 <function initMap()>{
+  // is this working
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBsHPavnFTHJ46KE883x80oSciN2yMR9k&callback=initMap">
 
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -34.397, lng: 150.644},
     zoom: 6
   });
+
   var infoWindow = new google.maps.InfoWindow({map: map});
+
 
    // Try HTML5 geolocation.
   if (navigator.geolocation) {
